@@ -23,6 +23,7 @@ import Icons from "views/Icons.js";
 import Maps from "views/Maps.js";
 import Notifications from "views/Notifications.js";
 import Upgrade from "views/Upgrade.js";
+import Applicant from "components/Recruitment/Applicant";
 
 const dashboardRoutes = [
   {
@@ -71,10 +72,10 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/typography",
-    name: "Typography",
+    path: "/recruitment",
+    name: "Recruitment",
     icon: "nc-icon nc-paper-2",
-    component: Typography,
+    component: Applicant,
     layout: "/admin",
   },
   {

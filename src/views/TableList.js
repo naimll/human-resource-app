@@ -30,20 +30,20 @@ function TableList() {
                 <Table className="table-hover table-striped">
                   <thead>
                     <tr>
-                      <th className="border-0">ID</th>
-                      <th className="border-0">Name</th>
-                      <th className="border-0">Salary</th>
-                      <th className="border-0">Country</th>
-                      <th className="border-0">City</th>
+                      <th className="border-0">First Name</th>
+                      <th className="border-0">Last Name</th>
+                      <th className="border-0">Other Name</th>
+                      <th className="border-0">Email</th>
+                      <th className="border-0">Phone Number</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td>Dakota Rice</td>
-                      <td>$36,738</td>
-                      <td>Niger</td>
-                      <td>Oud-Turnhout</td>
+                      <td>Richard</td>
+                      <td>Anderson</td>
+                      <td>JR</td>
+                      <td>richard@gmail.com</td>
+                      <td>+92123124</td>
                     </tr>
                     <tr>
                       <td>2</td>
