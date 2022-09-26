@@ -5,10 +5,10 @@ const RecruitmentHeader = () => {
   return (
     <Nav className="nav mr-auto" navbar>
       <Nav.Item>
-        <Link to="/admin/user" className="m-0 nav-link">
+        <Link to="/admin/recruitment" className="m-0 nav-link">
           <span className="no-icon">Applicant</span>
         </Link>
-        <Link to="/admin/user" className="m-0 nav-link">
+        <Link to="/admin/Applications" className="m-0 nav-link">
           <span className="no-icon">Application</span>
         </Link>
         <Link to="/admin/user" className="m-0 nav-link">

@@ -85,7 +85,7 @@ function Sidebar({ color, image, routes }) {
       <div
         className="sidebar-background"
         style={{
-          backgroundImage: "url(" + image + ")",
+          backgroundColor: "#28a745",
         }}
       />
       <div className="sidebar-wrapper">

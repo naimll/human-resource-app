@@ -27,17 +27,10 @@ import Applicant from "components/Recruitment/Applicant";
 import EmployeeList from "components/Employee/EmployeeList";
 import AddEmployee from "components/Employee/AddEmployee";
 import AddApplicant from "components/Recruitment/AddApplicant";
+import AddApplication from "components/Recruitment/AddApplication";
+import Application from "components/Recruitment/Aplication";
 
 const dashboardRoutes = [
-  {
-    upgrade: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "nc-icon nc-alien-33",
-    component: Upgrade,
-    layout: "/admin",
-    isMain: true,
-  },
   {
     path: "/dashboard",
     name: "Dashboard",
@@ -107,6 +100,22 @@ const dashboardRoutes = [
     name: "Recruitment",
     icon: "nc-icon nc-circle-09",
     component: AddApplicant,
+    layout: "/admin",
+    isMain: false,
+  },
+  {
+    path: "/AddApplication",
+    name: "Recruitment",
+    icon: "nc-icon nc-circle-09",
+    component: AddApplication,
+    layout: "/admin",
+    isMain: false,
+  },
+  {
+    path: "/Applications",
+    name: "Recruitment",
+    icon: "nc-icon nc-circle-09",
+    component: Application,
     layout: "/admin",
     isMain: false,
   },

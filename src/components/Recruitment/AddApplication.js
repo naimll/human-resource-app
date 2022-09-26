@@ -14,7 +14,7 @@ import {
 import { Link, NavLink } from "react-router-dom";
 import Select from "react-select";
 
-const AddApplicant = () => {
+const AddApplication = () => {
   const [cities, setCities] = useState([
     { label: "Islamabad", value: "asf" },
     { label: "Lahore", value: "asf" },
@@ -141,4 +141,4 @@ const AddApplicant = () => {
   );
 };
 
-export default AddApplicant;
+export default AddApplication;
