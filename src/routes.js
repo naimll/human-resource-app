@@ -47,15 +47,6 @@ const dashboardRoutes = [
     icon: "nc-icon nc-circle-09",
     component: Notifications,
     layout: "/admin",
-    childrens: [
-      {
-        path: "/employees",
-        name: "Employees",
-        icon: "nc-icon nc-circle-09",
-        component: Notifications,
-        layout: "/admin",
-      },
-    ],
   },
   {
     path: "/user",
