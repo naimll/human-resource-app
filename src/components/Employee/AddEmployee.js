@@ -17,9 +17,25 @@ import {
     Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Select from "react-select";
 
 function AddEmployee() {
-    const [startDate, setStartDate] = useState(new Date());
+    const [dateOfBirth, setDateOfBirth] = useState(new Date());
+    const [joinedDate, setJoinedDate] = useState(new Date());
+    const [probationDate, setProbationDate] = useState(new Date());
+    const [genderList, setGenderList] = useState([]);
+    const [employeeStatusList, setEmployeeStatusList] = useState([]);
+    const [bloodGroupList, setBloodGroupList] = useState([]);
+    const [employeeTypeList, setEmployeeTypeList] = useState([]);
+    const [bankList, setBankList] = useState([]);
+    const [employeeTitleList, setEmployeeTitleList] = useState([]);
+    const [scheduleTypeList, setScheduleTypeList] = useState([]);
+    const [objectList, setObjectList] = useState([]);
+    const [officeList, setOfficeList] = useState([]);
+    const [countries, setCountries] = useState([
+        { value: 'test', label: 'Test' }
+    ]);
+    const [cities, setCities] = useState([]);
     return (
         <>
             <Container fluid>
@@ -75,14 +91,145 @@ function AddEmployee() {
                                             </div>
                                         </div>
                                         <div className="col-md-4">
-                                            <div className="form-group pr-lg-2">
+                                            <div className="form-group pr-lg-3">
                                                 <label>Date of Birth</label>
-                                                <DatePicker className="form-control" 
-                                                    selected={startDate} 
-                                                    onChange={(date) => setStartDate(date)} 
+                                                <DatePicker className="form-control"
+                                                    selected={dateOfBirth}
+                                                    onChange={(date) => setDateOfBirth(date)}
                                                     dateFormat="dd/MM/yyyy"
                                                 />
                                             </div>
+                                        </div>
+                                        <div className="col-md-4 pl-lg-4">
+                                            <div className="form-group">
+                                                <label>Country</label>
+                                                <Select options={countries} />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="form-group">
+                                                <label>City</label>
+                                                <Select options={cities} />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pr-lg-4">
+                                            <div className="form-group">
+                                                <label>Place</label>
+                                                <input type="text" placeholder="Place" className="form-control" />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pl-lg-4">
+                                            <div className="form-group">
+                                                <label>Street Address</label>
+                                                <input type="text" placeholder="Street Address" className="form-control" />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="form-group">
+                                                <label>Photo</label>
+                                                <input type="file" className="form-control" />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pr-lg-4">
+                                            <div className="form-group">
+                                                <label>Joined Date</label>
+                                                <DatePicker className="form-control"
+                                                    selected={joinedDate}
+                                                    onChange={(date) => setJoinedDate(date)}
+                                                    dateFormat="dd/MM/yyyy"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pl-lg-4">
+                                            <div className="form-group">
+                                                <label>Probation Date</label>
+                                                <DatePicker className="form-control"
+                                                    selected={probationDate}
+                                                    onChange={(date) => setProbationDate(date)}
+                                                    dateFormat="dd/MM/yyyy"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="form-group">
+                                                <label>Phone number</label>
+                                                <input type="text" placeholder="Phone number" className="form-control" />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pr-lg-4">
+                                            <div className="form-group">
+                                                <label>Emergency Contact Phone number</label>
+                                                <input type="text" placeholder="Emergency Contact" className="form-control" />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pl-lg-4">
+                                            <div className="form-group">
+                                                <label>Gender</label>
+                                                <Select options={genderList} />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="form-group">
+                                                <label>Employee Status</label>
+                                                <Select options={employeeStatusList} />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pr-lg-4">
+                                            <div className="form-group">
+                                                <label>Blood Group</label>
+                                                <Select options={bloodGroupList} />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pl-lg-4">
+                                            <div className="form-group">
+                                                <label>Employee Type</label>
+                                                <Select options={employeeTypeList} />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="form-group">
+                                                <label>Bank</label>
+                                                <Select options={bankList} />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pr-lg-4">
+                                            <div className="form-group">
+                                                <label>Acount number</label>
+                                                <input type="text" placeholder="Account number" className="form-control" />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pl-lg-4">
+                                            <div className="form-group">
+                                                <label>Employee Title</label>
+                                                <Select options={employeeTitleList} />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="form-group">
+                                                <label>Schedule Type</label>
+                                                <Select options={scheduleTypeList} />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pr-lg-4">
+                                            <div className="form-group">
+                                                <label>RFID Code</label>
+                                                <input type="text" placeholder="RFID Code" className="form-control" />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4 pl-lg-4">
+                                            <div className="form-group">
+                                                <label>Object</label>
+                                                <Select options={objectList} />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="form-group">
+                                                <label>Office</label>
+                                                <Select options={officeList} />
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-12 text-right pr-lg-4">
+                                            <button type="submit" className="btn btn-primary">Ruaj</button>
                                         </div>
                                     </div>
                                 </form>
