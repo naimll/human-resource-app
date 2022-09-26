@@ -16,10 +16,12 @@
 
 */
 import React, { Component } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Navbar, Container, Nav, Dropdown, Button } from "react-bootstrap";
 
 import routes from "routes.js";
+import EmployeeHeader from "components/Headers/EmployeeHeader";
+import UserProfileHeader from "components/Headers/UserProfileHeader";
 
 function Header() {
   const location = useLocation();
@@ -37,6 +39,7 @@ function Header() {
 
   const getBrandText = () => {
     for (let i = 0; i < routes.length; i++) {
+      console.log(routes[i].name);
       if (location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
         return routes[i].name;
       }
@@ -54,13 +57,13 @@ function Header() {
           >
             <i className="fas fa-ellipsis-v"></i>
           </Button>
-          <Navbar.Brand
-            href="#home"
+          {/* <Navbar.Brand
+            href="/home"
             onClick={(e) => e.preventDefault()}
             className="mr-2"
           >
             {getBrandText()}
-          </Navbar.Brand>
+          </Navbar.Brand> */}
         </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-2">
           <span className="navbar-toggler-bar burger-lines"></span>
@@ -68,16 +71,22 @@ function Header() {
           <span className="navbar-toggler-bar burger-lines"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="nav mr-auto" navbar>
+          {getBrandText() == "Employees" &&
+            <EmployeeHeader />
+          }
+          {getBrandText() == "User Profile" &&
+            <UserProfileHeader />
+          }
+          {/* <Nav className="nav mr-auto" navbar>
             <Nav.Item>
               <Nav.Link
                 data-toggle="dropdown"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
                 className="m-0"
               >
-                <i className="nc-icon nc-palette"></i>
-                <span className="d-lg-none ml-1">Dashboard</span>
+                <Link to="/admin/pablo">
+                  <i className="nc-icon nc-palette"></i>
+                  <span className="d-lg-none ml-1">Dashboard</span>
+                </Link>
               </Nav.Link>
             </Nav.Item>
             <Dropdown as={Nav.Item}>
@@ -125,19 +134,9 @@ function Header() {
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Nav.Item>
-              <Nav.Link
-                className="m-0"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <i className="nc-icon nc-zoom-split"></i>
-                <span className="d-lg-block"> Search</span>
-              </Nav.Link>
-            </Nav.Item>
-          </Nav>
+          </Nav> */}
           <Nav className="ml-auto" navbar>
-            <Nav.Item>
+            {/* <Nav.Item>
               <Nav.Link
                 className="m-0"
                 href="#pablo"
@@ -145,8 +144,8 @@ function Header() {
               >
                 <span className="no-icon">Account</span>
               </Nav.Link>
-            </Nav.Item>
-            <Dropdown as={Nav.Item}>
+            </Nav.Item> */}
+            {/* <Dropdown as={Nav.Item}>
               <Dropdown.Toggle
                 aria-expanded={false}
                 aria-haspopup={true}
@@ -191,11 +190,11 @@ function Header() {
                   Separated link
                 </Dropdown.Item>
               </Dropdown.Menu>
-            </Dropdown>
+            </Dropdown> */}
             <Nav.Item>
               <Nav.Link
                 className="m-0"
-                href="#pablo"
+                href="#logout"
                 onClick={(e) => e.preventDefault()}
               >
                 <span className="no-icon">Log out</span>
