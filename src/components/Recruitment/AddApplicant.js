@@ -1,4 +1,5 @@
-import React from "react";
+import RecruitmentHeader from "components/Headers/RecruitmentHeader";
+import React, { useState } from "react";
 import {
   Badge,
   Button,
@@ -11,8 +12,10 @@ import {
   Col,
 } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import Select from "react-select";
 
 const AddApplicant = () => {
+  const [cities, setCities] = useState([{ label: "as", value: "asf" }]);
   return (
     <>
       <Container fluid>
@@ -20,51 +23,10 @@ const AddApplicant = () => {
           <Col md="12">
             <Card className="strpied-tabled-with-hover">
               <Card.Header className="d-flex justify-content-between">
-                <Card.Title as="h4">Applicants</Card.Title>
-
-                <Link
-                  to="/AddCity"
-                  className="btn btn-md btn-outline-primary w-25 mb-3 rounded-0 "
-                >
-                  <i className="fa fa-plus " aria-hidden="true"></i> Create
-                </Link>
+                <Card.Title as="h4">Add Applicant</Card.Title>
               </Card.Header>
-              <Card.Body className="table-full-width table-responsive px-0">
+              <Card.Body className="">
                 <Form>
-                  <Row>
-                    <Col className="pr-1" md="5">
-                      <Form.Group>
-                        <label>Company (disabled)</label>
-                        <Form.Control
-                          defaultValue="Creative Code Inc."
-                          disabled
-                          placeholder="Company"
-                          type="text"
-                        ></Form.Control>
-                      </Form.Group>
-                    </Col>
-                    <Col className="px-1" md="3">
-                      <Form.Group>
-                        <label>Username</label>
-                        <Form.Control
-                          defaultValue="michael23"
-                          placeholder="Username"
-                          type="text"
-                        ></Form.Control>
-                      </Form.Group>
-                    </Col>
-                    <Col className="pl-1" md="4">
-                      <Form.Group>
-                        <label htmlFor="exampleInputEmail1">
-                          Email address
-                        </label>
-                        <Form.Control
-                          placeholder="Email"
-                          type="email"
-                        ></Form.Control>
-                      </Form.Group>
-                    </Col>
-                  </Row>
                   <Row>
                     <Col className="pr-1" md="6">
                       <Form.Group>
@@ -88,6 +50,29 @@ const AddApplicant = () => {
                     </Col>
                   </Row>
                   <Row>
+                    <Col className="pr-1" md="4">
+                      <Form.Group>
+                        <label>Other Name</label>
+                        <Form.Control
+                          defaultValue="John"
+                          placeholder="Other Name"
+                          type="text"
+                        ></Form.Control>
+                      </Form.Group>
+                    </Col>
+                    <Col className="pl-1" md="4">
+                      <Form.Group>
+                        <label htmlFor="richard.anderson@example.com">
+                          Email address
+                        </label>
+                        <Form.Control
+                          placeholder="Email"
+                          type="email"
+                        ></Form.Control>
+                      </Form.Group>
+                    </Col>
+                  </Row>
+                  <Row>
                     <Col md="12">
                       <Form.Group>
                         <label>Address</label>
@@ -103,11 +88,6 @@ const AddApplicant = () => {
                     <Col className="pr-1" md="4">
                       <Form.Group>
                         <label>City</label>
-                        <Form.Control
-                          defaultValue="Mike"
-                          placeholder="City"
-                          type="text"
-                        ></Form.Control>
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">

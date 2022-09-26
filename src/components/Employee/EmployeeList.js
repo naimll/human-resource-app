@@ -13,69 +13,35 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-function Notifications() {
-  // const [showModal, setShowModal] = React.useState(false);
-  // const notificationAlertRef = React.useRef(null);
-  // const notify = (place) => {
-  //   var color = Math.floor(Math.random() * 5 + 1);
-  //   var type;
-  //   switch (color) {
-  //     case 1:
-  //       type = "primary";
-  //       break;
-  //     case 2:
-  //       type = "success";
-  //       break;
-  //     case 3:
-  //       type = "danger";
-  //       break;
-  //     case 4:
-  //       type = "warning";
-  //       break;
-  //     case 5:
-  //       type = "info";
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  //   var options = {};
-  //   options = {
-  //     place: place,
-  //     message: (
-  //       <div>
-  //         <div>
-  //           Welcome to <b>Light Bootstrap Dashboard React</b> - a beautiful
-  //           freebie for every web developer.
-  //         </div>
-  //       </div>
-  //     ),
-  //     type: type,
-  //     icon: "nc-icon nc-bell-55",
-  //     autoDismiss: 7,
-  //   };
-  //   notificationAlertRef.current.notificationAlert(options);
-  // };
+function EmployeeList() {
   return (
     <>
       <Container fluid>
         <Row>
           <Col md="12">
             <Card className="strpied-tabled-with-hover">
-              <Card.Header>
-                <Card.Title as="h4">Striped Table with Hover</Card.Title>
-                <p className="card-category">
+              <Card.Header className="d-flex justify-content-between align-items-center">
+                <Card.Title as="h4">Employee List</Card.Title>
+                {/* <p className="card-category">
                   Here is a subtitle for this table
-                </p>
+                </p> */}
+                <Link
+                  to="/admin/AddEmployee"
+                  className="btn btn-md btn-outline-primary w-25 mb-3 rounded-0 "
+                >
+                  <i className="fa fa-plus " aria-hidden="true"></i> Create
+                </Link>
               </Card.Header>
               <Card.Body className="table-full-width table-responsive px-0">
                 <Table className="table-hover table-striped">
                   <thead>
                     <tr>
-                      <th className="border-0">ID</th>
+                      <th className="border-0">Nr</th>
                       <th className="border-0">Name</th>
-                      <th className="border-0">Salary</th>
-                      <th className="border-0">Country</th>
+                      <th className="border-0">Personal Number</th>
+                      <th className="border-0">Email</th>
                       <th className="border-0">City</th>
                     </tr>
                   </thead>
@@ -83,43 +49,43 @@ function Notifications() {
                     <tr>
                       <td>1</td>
                       <td>Dakota Rice</td>
-                      <td>$36,738</td>
-                      <td>Niger</td>
+                      <td>123123123</td>
+                      <td>dakota.rice@gmail.com</td>
                       <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>Minerva Hooper</td>
-                      <td>$23,789</td>
-                      <td>Curaçao</td>
+                      <td>123123123</td>
+                      <td>minerva.hooper@gmail.com</td>
                       <td>Sinaai-Waas</td>
                     </tr>
                     <tr>
                       <td>3</td>
                       <td>Sage Rodriguez</td>
-                      <td>$56,142</td>
-                      <td>Netherlands</td>
+                      <td>123123123</td>
+                      <td>sage.rodrigues@gmail.com</td>
                       <td>Baileux</td>
                     </tr>
                     <tr>
                       <td>4</td>
                       <td>Philip Chaney</td>
-                      <td>$38,735</td>
-                      <td>Korea, South</td>
+                      <td>123123123</td>
+                      <td>philip.chaney@gmail.com</td>
                       <td>Overland Park</td>
                     </tr>
                     <tr>
                       <td>5</td>
                       <td>Doris Greene</td>
-                      <td>$63,542</td>
-                      <td>Malawi</td>
+                      <td>123123123</td>
+                      <td>doris.greene@gmail.com</td>
                       <td>Feldkirchen in Kärnten</td>
                     </tr>
                     <tr>
                       <td>6</td>
                       <td>Mason Porter</td>
-                      <td>$78,615</td>
-                      <td>Chile</td>
+                      <td>123123123</td>
+                      <td>mason.porter@gmail.com</td>
                       <td>Gloucester</td>
                     </tr>
                   </tbody>
@@ -133,4 +99,4 @@ function Notifications() {
   );
 }
 
-export default Notifications;
+export default EmployeeList;

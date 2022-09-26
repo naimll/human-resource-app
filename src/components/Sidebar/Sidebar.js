@@ -11,7 +11,7 @@ function Sidebar({ color, image, routes }) {
   const activeRoute = (routeName) => {
     return location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
-  console.log(routes[2].childrens);
+  // console.log(routes[2].childrens);
   // return (
   //   <div className="sidebar" data-image={image} data-color={color}>
   //     <div className="sidebar-background bg-secondary" />
@@ -107,7 +107,7 @@ function Sidebar({ color, image, routes }) {
         </div>
         <Nav>
           {routes.map((prop, key) => {
-            if (!prop.redirect)
+            if (!prop.redirect && prop.isMain == true)
               return (
                 <li
                   className={

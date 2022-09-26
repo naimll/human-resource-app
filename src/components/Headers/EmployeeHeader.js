@@ -5,8 +5,13 @@ const EmployeeHeader = () => {
     return (
         <Nav className="nav mr-auto" navbar>
             <Nav.Item>
-                <Link to="/admin/user" className="m-0 nav-link">
-                    <span className="no-icon">User Profile</span>
+                <Link to="/admin/employees" className="m-0 nav-link">
+                    <span className="no-icon">Employees</span>
+                </Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Link to="/admin/documents" className="m-0 nav-link">
+                    <span className="no-icon">Documents</span>
                 </Link>
             </Nav.Item>
         </Nav>

@@ -23,7 +23,7 @@ const Applicant = () => {
                 <Card.Title as="h4">Applicants</Card.Title>
 
                 <Link
-                  to="/admin/recruitment/add-applicant"
+                  to="/admin/AddApplicant"
                   className="btn btn-md btn-outline-primary w-25 mb-3 rounded-0 "
                 >
                   <i className="fa fa-plus " aria-hidden="true"></i> Create
