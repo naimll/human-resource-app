@@ -24,6 +24,8 @@ import Maps from "views/Maps.js";
 import Notifications from "views/Notifications.js";
 import Upgrade from "views/Upgrade.js";
 import Applicant from "components/Recruitment/Applicant";
+import EmployeeList from "components/Employee/EmployeeList";
+import AddEmployee from "components/Employee/AddEmployee";
 
 const dashboardRoutes = [
   {
@@ -33,6 +35,7 @@ const dashboardRoutes = [
     icon: "nc-icon nc-alien-33",
     component: Upgrade,
     layout: "/admin",
+    isMain: true
   },
   {
     path: "/dashboard",
@@ -40,22 +43,15 @@ const dashboardRoutes = [
     icon: "nc-icon nc-chart-pie-35",
     component: Dashboard,
     layout: "/admin",
+    isMain: true
   },
   {
     path: "/employees",
     name: "Employees",
     icon: "nc-icon nc-circle-09",
-    component: Notifications,
+    component: EmployeeList,
     layout: "/admin",
-    childrens: [
-      {
-        path: "/employees",
-        name: "Employees",
-        icon: "nc-icon nc-circle-09",
-        component: Notifications,
-        layout: "/admin",
-      },
-    ],
+    isMain: true
   },
   {
     path: "/user",
@@ -63,6 +59,7 @@ const dashboardRoutes = [
     icon: "nc-icon nc-circle-09",
     component: UserProfile,
     layout: "/admin",
+    isMain: true
   },
   {
     path: "/Settings",
@@ -70,6 +67,7 @@ const dashboardRoutes = [
     icon: "nc-icon nc-settings-gear-64",
     component: TableList,
     layout: "/admin",
+    isMain: true
   },
   {
     path: "/recruitment",
@@ -77,6 +75,7 @@ const dashboardRoutes = [
     icon: "nc-icon nc-paper-2",
     component: Applicant,
     layout: "/admin",
+    isMain: true
   },
   {
     path: "/icons",
@@ -84,6 +83,7 @@ const dashboardRoutes = [
     icon: "nc-icon nc-atom",
     component: Icons,
     layout: "/admin",
+    isMain: true
   },
   {
     path: "/maps",
@@ -91,7 +91,16 @@ const dashboardRoutes = [
     icon: "nc-icon nc-pin-3",
     component: Maps,
     layout: "/admin",
+    isMain: true
   },
+  {
+    path: "/AddEmployee",
+    name: "Employees",
+    icon: "nc-icon nc-circle-09",
+    component: AddEmployee,
+    layout: "/admin",
+    isMain: false
+  }
 ];
 
 export default dashboardRoutes;
