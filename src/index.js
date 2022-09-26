@@ -27,6 +27,7 @@ import "./assets/css/demo.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import AdminLayout from "layouts/Admin.js";
+import AddApplicant from "components/Recruitment/AddApplicant";
 import Maps from "views/Maps";
 import Typography from "views/Typography";
 

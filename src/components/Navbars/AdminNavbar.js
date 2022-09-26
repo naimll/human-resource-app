@@ -22,6 +22,7 @@ import { Navbar, Container, Nav, Dropdown, Button } from "react-bootstrap";
 import routes from "routes.js";
 import EmployeeHeader from "components/Headers/EmployeeHeader";
 import UserProfileHeader from "components/Headers/UserProfileHeader";
+import RecruitmentHeader from "components/Headers/RecruitmentHeader";
 
 function Header() {
   const location = useLocation();
@@ -71,12 +72,9 @@ function Header() {
           <span className="navbar-toggler-bar burger-lines"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          {getBrandText() == "Employees" &&
-            <EmployeeHeader />
-          }
-          {getBrandText() == "User Profile" &&
-            <UserProfileHeader />
-          }
+          {getBrandText() == "Employees" && <EmployeeHeader />}
+          {getBrandText() == "User Profile" && <UserProfileHeader />}
+          {getBrandText() == "Recruitment" && <RecruitmentHeader />}
           {/* <Nav className="nav mr-auto" navbar>
             <Nav.Item>
               <Nav.Link
