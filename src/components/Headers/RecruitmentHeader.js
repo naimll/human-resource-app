@@ -11,8 +11,8 @@ const RecruitmentHeader = () => {
         <Link to="/admin/Applications" className="m-0 nav-link">
           <span className="no-icon">Application</span>
         </Link>
-        <Link to="/admin/user" className="m-0 nav-link">
-          <span className="no-icon">Applicant</span>
+        <Link to="/admin/application-documents" className="m-0 nav-link">
+          <span className="no-icon">Application Documents</span>
         </Link>
       </Nav.Item>
     </Nav>
