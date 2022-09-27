@@ -31,6 +31,9 @@ import AddApplication from "components/Recruitment/AddApplication";
 import Application from "components/Recruitment/Aplication";
 import EmployeeDocumentList from "components/EmployeeDocument/EmployeeDocumentList";
 import AddEmployeeDocument from "components/EmployeeDocument/AddEmployeeDocument";
+import ApplicationDocument from "components/Recruitment/ApplicationDocument";
+import AddApplicationDocument from "components/Recruitment/AddApplicationDocument";
+import ApplicationEvaluation from "components/Recruitment/ApplicationEvaluation";
 
 const dashboardRoutes = [
   {
@@ -126,6 +129,10 @@ const dashboardRoutes = [
     name: "Employees",
     icon: "nc-icon nc-circle-09",
     component: EmployeeDocumentList,
+    path: "/application-documents",
+    name: "Recruitment",
+    icon: "nc-icon nc-circle-09",
+    component: ApplicationDocument,
     layout: "/admin",
     isMain: false,
   },
@@ -136,7 +143,23 @@ const dashboardRoutes = [
     component: AddEmployeeDocument,
     layout: "/admin",
     isMain: false,
-  }
+  },
+  {
+    path: "/add-application-document",
+    name: "Recruitment",
+    icon: "nc-icon nc-circle-09",
+    component: AddApplicationDocument,
+    layout: "/admin",
+    isMain: false,
+  },
+  {
+    path: "/application-evaluation",
+    name: "Recruitment",
+    icon: "nc-icon nc-circle-09",
+    component: ApplicationEvaluation,
+    layout: "/admin",
+    isMain: false,
+  },
 ];
 
 export default dashboardRoutes;

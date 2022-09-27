@@ -13,6 +13,7 @@ import {
 } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import Select from "react-select";
+import DatePicker from "react-datepicker";
 
 const AddApplication = () => {
   const [cities, setCities] = useState([
@@ -24,6 +25,7 @@ const AddApplication = () => {
     { label: "Pakistan", value: "asf" },
     { label: "Pakistan", value: "asf" },
   ]);
+  const [startDate, setStartDate] = useState(new Date());
 
   return (
     <>
@@ -32,27 +34,28 @@ const AddApplication = () => {
           <Col md="12">
             <Card className="strpied-tabled-with-hover">
               <Card.Header className="d-flex justify-content-between">
-                <Card.Title as="h4">Add Applicant</Card.Title>
+                <Card.Title as="h4">Add Application</Card.Title>
               </Card.Header>
               <Card.Body className="">
                 <Form>
                   <Row>
                     <Col className="pr-1" md="6">
                       <Form.Group>
-                        <label>First Name</label>
-                        <Form.Control
-                          defaultValue="Mike"
-                          placeholder="Company"
-                          type="text"
-                        ></Form.Control>
+                        <label>Date</label>
+                        <DatePicker
+                          className="form-control"
+                          selected={startDate}
+                          onChange={(date) => setStartDate(date)}
+                          dateFormat="dd/MM/yyyy"
+                        />
                       </Form.Group>
                     </Col>
                     <Col className="pl-1" md="6">
                       <Form.Group>
-                        <label>Last Name</label>
+                        <label>Education</label>
                         <Form.Control
-                          defaultValue="Andrew"
-                          placeholder="Last Name"
+                          defaultValue="Computer Science"
+                          placeholder="Education"
                           type="text"
                         ></Form.Control>
                       </Form.Group>
@@ -61,10 +64,10 @@ const AddApplication = () => {
                   <Row>
                     <Col className="pr-1" md="6">
                       <Form.Group>
-                        <label>Other Name</label>
+                        <label>Experience</label>
                         <Form.Control
-                          defaultValue="John"
-                          placeholder="Other Name"
+                          defaultValue="Software Developer at ABC"
+                          placeholder="Experience"
                           type="text"
                         ></Form.Control>
                       </Form.Group>
@@ -72,47 +75,28 @@ const AddApplication = () => {
                     <Col className="pl-1" md="6">
                       <Form.Group>
                         <label htmlFor="richard.anderson@example.com">
-                          Email address
+                          Other Info
                         </label>
                         <Form.Control
-                          placeholder="Email"
+                          placeholder="Other Info"
                           type="email"
                         ></Form.Control>
                       </Form.Group>
                     </Col>
                   </Row>
                   <Row>
-                    <Col md="12">
+                    <Col className="pr-1" md="6">
                       <Form.Group>
-                        <label>Address</label>
+                        <label>Applicant</label>
                         <Form.Control
-                          defaultValue="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
-                          placeholder="Home Address"
+                          defaultValue="Richard Anderson"
+                          placeholder="Applicant"
                           type="text"
                         ></Form.Control>
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Row>
-                    <Col className="pr-1" md="4">
-                      <Form.Group>
-                        <label>City</label>
-                        <Select
-                          options={cities}
-                          className={`dropdown rounded-0`}
-                        />
-                      </Form.Group>
-                    </Col>
-                    <Col className="pr-1" md="4">
-                      <Form.Group>
-                        <label>Country</label>
-                        <Select
-                          options={countries}
-                          className={`dropdown rounded-0`}
-                        />
-                      </Form.Group>
-                    </Col>
-                  </Row>
+
                   <div className="col-lg-12">
                     <div className="d-flex justify-content-end  form-group mt-3">
                       <button
