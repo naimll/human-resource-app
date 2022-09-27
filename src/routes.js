@@ -29,6 +29,8 @@ import AddEmployee from "components/Employee/AddEmployee";
 import AddApplicant from "components/Recruitment/AddApplicant";
 import AddApplication from "components/Recruitment/AddApplication";
 import Application from "components/Recruitment/Aplication";
+import EmployeeDocumentList from "components/EmployeeDocument/EmployeeDocumentList";
+import AddEmployeeDocument from "components/EmployeeDocument/AddEmployeeDocument";
 
 const dashboardRoutes = [
   {
@@ -119,6 +121,22 @@ const dashboardRoutes = [
     layout: "/admin",
     isMain: false,
   },
+  {
+    path: "/EmployeeDocuments",
+    name: "Employees",
+    icon: "nc-icon nc-circle-09",
+    component: EmployeeDocumentList,
+    layout: "/admin",
+    isMain: false,
+  },
+  {
+    path: "/AddEmployeeDocument",
+    name: "Employees",
+    icon: "nc-icon nc-circle-09",
+    component: AddEmployeeDocument,
+    layout: "/admin",
+    isMain: false,
+  }
 ];
 
 export default dashboardRoutes;

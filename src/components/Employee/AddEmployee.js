@@ -229,6 +229,7 @@ function AddEmployee() {
                                             </div>
                                         </div>
                                         <div className="col-lg-12 text-right pr-lg-4">
+                                            <button type="button" class="btn btn-md btn-secondary rounded-0 me-3 mr-3">Cancel</button>
                                             <button type="submit" className="btn btn-primary">Ruaj</button>
                                         </div>
                                     </div>

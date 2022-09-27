@@ -10,7 +10,7 @@ const EmployeeHeader = () => {
                 </Link>
             </Nav.Item>
             <Nav.Item>
-                <Link to="/admin/documents" className="m-0 nav-link">
+                <Link to="/admin/EmployeeDocuments" className="m-0 nav-link">
                     <span className="no-icon">Documents</span>
                 </Link>
             </Nav.Item>
