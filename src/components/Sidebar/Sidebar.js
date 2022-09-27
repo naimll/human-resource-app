@@ -8,8 +8,17 @@ import SidebarItem from "./SidebarItem";
 
 function Sidebar({ color, image, routes }) {
   const location = useLocation();
-  const activeRoute = (routeName) => {
-    return location.pathname.indexOf(routeName) > -1 ? "active" : "";
+  const activeRoute = (routeName,pathName) => {
+    for(let i = 0;i < routes.length;i++){
+      let pathRoute = routes[i].layout+routes[i].path;
+      if(location.pathname.indexOf(pathRoute) > -1){
+        if(routes[i].name == pathName){
+          return "active";
+        }
+      }
+    }
+    return "";
+    // return location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
   // console.log(routes[2].childrens);
   // return (
@@ -113,7 +122,7 @@ function Sidebar({ color, image, routes }) {
                   className={
                     prop.upgrade
                       ? "active active-pro"
-                      : activeRoute(prop.layout + prop.path)
+                      : activeRoute(prop.layout + prop.path,prop.name)
                   }
                   key={key}
                 >
