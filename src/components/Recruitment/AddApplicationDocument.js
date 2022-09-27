@@ -32,7 +32,7 @@ const AddApplicationDocument = () => {
           <Col md="12">
             <Card className="strpied-tabled-with-hover">
               <Card.Header className="d-flex justify-content-between">
-                <Card.Title as="h4">Add Applicant</Card.Title>
+                <Card.Title as="h4">Add Application Document</Card.Title>
               </Card.Header>
               <Card.Body className="">
                 <Form>

@@ -31,6 +31,7 @@ import AddApplication from "components/Recruitment/AddApplication";
 import Application from "components/Recruitment/Aplication";
 import ApplicationDocument from "components/Recruitment/ApplicationDocument";
 import AddApplicationDocument from "components/Recruitment/AddApplicationDocument";
+import ApplicationEvaluation from "components/Recruitment/ApplicationEvaluation";
 
 const dashboardRoutes = [
   {
@@ -134,6 +135,14 @@ const dashboardRoutes = [
     name: "Recruitment",
     icon: "nc-icon nc-circle-09",
     component: AddApplicationDocument,
+    layout: "/admin",
+    isMain: false,
+  },
+  {
+    path: "/application-evaluation",
+    name: "Recruitment",
+    icon: "nc-icon nc-circle-09",
+    component: ApplicationEvaluation,
     layout: "/admin",
     isMain: false,
   },
